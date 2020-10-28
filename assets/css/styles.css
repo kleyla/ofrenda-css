@@ -1,0 +1,39 @@
+:root {
+  --bg: #361154;
+  --witdh: calc(100vw / 7);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  background: var(--bg);
+  overflow: hidden;
+}
+.row {
+  position: relative;
+  left: -15vh;
+  display: flex;
+  flex-direction: row;
+}
+.box {
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+.box img {
+  width: var(--witdh);
+  height: auto;
+  z-index: 11;
+}
+.box img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.box:hover img:nth-child(2) {
+  opacity: 1;
+}
