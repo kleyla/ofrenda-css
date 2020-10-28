@@ -10,6 +10,7 @@
   text-decoration: none;
   font-family: "Creepster", cursive;
 }
+html,
 body {
   background: var(--bg);
   width: 100vw;
@@ -64,7 +65,7 @@ body {
 .title h1:nth-child(2) {
   color: #ffffff;
 }
-.spider-1{
+.spider-1 {
   position: absolute;
   top: 0;
   left: 0;
@@ -80,9 +81,15 @@ body {
   opacity: 0;
   z-index: 10;
 }
-.title:hover .spider-1{
+.title:hover .spider-1 {
   opacity: 1;
 }
-.title:hover .spider-2{
+.title:hover .spider-2 {
   opacity: 1;
+}
+@media (max-width: 930px) {
+  .title {
+    /* width: calc(var(--height) * 1); */
+    font-size: 20px;
+  }
 }
