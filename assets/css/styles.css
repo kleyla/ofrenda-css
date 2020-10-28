@@ -88,6 +88,39 @@ body {
 .title:hover .spider-2 {
   opacity: 1;
 }
+@-webkit-keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.flower {
+  position: absolute;
+  opacity: 0;
+  z-index: 12;
+}
+.flower-1 {
+  top: 0;
+  left: 0;
+}
+.flower-2 {
+  top: 0;
+  right: 0;
+}
+.flower-3 {
+  bottom: 0;
+  right: 0;
+}
+.flower-4 {
+  bottom: 0;
+  left: 0;
+}
+.title:hover .flower {
+  opacity: 1;
+  animation: rotating 2s linear infinite;
+}
 @media (max-width: 930px) {
   .title {
     width: calc(var(--height) * 1);
