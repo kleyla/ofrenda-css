@@ -22,6 +22,12 @@ body {
   display: flex;
   flex-direction: row;
 }
+.row-down {
+  position: relative;
+  /* left: calc(var(--witdh) * 0.5 * -1); */
+  display: flex;
+  flex-direction: row;
+}
 .box {
   /* height: 100%; */
   opacity: 1;
@@ -50,6 +56,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  position: relative;
 }
 .title h1:nth-child(1) {
   color: #ffb000;
@@ -57,9 +64,25 @@ body {
 .title h1:nth-child(2) {
   color: #ffffff;
 }
-.row-down {
-  position: relative;
-  /* left: calc(var(--witdh) * 0.5 * -1); */
-  display: flex;
-  flex-direction: row;
+.spider-1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  opacity: 0;
+  z-index: 9;
+}
+.spider-2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: var(--height);
+  opacity: 0;
+  z-index: 10;
+}
+.title:hover .spider-1{
+  opacity: 1;
+}
+.title:hover .spider-2{
+  opacity: 1;
 }
